@@ -1,11 +1,9 @@
 1. Code aus Github in IDE öffnen, maven Projekt bauen
 
-2. Klassen Indexer und Searcher erstellen
+2. Klassen Indexer und Searcher erstellen (jeweils mit einer main Methode)
 
 3. Index:
-  - Dokumente indexieren
+  - SolrClient und damit ein oder mehrere Dokumente in den core library indexieren.
 
 4. Suche
-  -
-  - Facette auf Author bilden
-  -
+  - Queries aus 2_queries in SolrJ umsetzen

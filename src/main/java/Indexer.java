@@ -10,21 +10,21 @@ import org.apache.solr.common.SolrInputDocument;
 public class Indexer {
 
   public static void main(String[] args) {
-    try (SolrClient client = new Http2SolrClient.Builder(
-        "http://localhost:8983/solr/test_core_1").build()) {
+    try (SolrClient client =
+        new Http2SolrClient.Builder("http://localhost:8983/solr/library").build()) {
       SolrInputDocument doc = new SolrInputDocument();
-      doc.addField("id", "7");
-      doc.addField("isbn", "978-1408114391");
-      doc.addField("title", "Cat on a Hot Tin Roof");
-      doc.addField("description",
-          "In Cat on a Hot Tin Roof a Southern family meet to celebrate "
-              + "'Big Daddy' Pollit's birthday: Gooper with his wife and children, "
-              + "his brother Brick - an ageing, broken football star - and his wife Maggie. "
-              + "But as the party unfolds the facade of a happy family gathering is "
-              + "fractured by sexual frustration, repressed love, and greed in the light of their "
-              + "father's impending death.");
+      doc.addField("id", "8");
+      doc.addField("isbn", "978-3596271207");
+      doc.addField("title", "Endstation Sehnsucht");
+      doc.addField(
+          "description",
+          "Endstation Sehnsucht‹ erzählt die Geschichte von Blanche Dubois, "
+              + "einer Lehrerin aus den Südstaaten. Blanche erlebt die Auflösung ihrer Familie, "
+              + "einer nach dem anderen stirbt, sie muß zusehen, wie der einstmals stolze Besitz, "
+              + "das Herrenhaus »Belle Reve«, zwangsversteigert wird.");
       doc.addField("author", "Tennessee Williams");
       doc.addField("country", "USA");
+      doc.addField("year", "2010");
 
       try {
         client.add(doc);
@@ -42,4 +42,3 @@ public class Indexer {
     System.out.println("Commit done");
   }
 }
-

@@ -11,26 +11,22 @@ import org.apache.solr.common.SolrDocumentList;
  * @author Doris Peter, IDV AG
  */
 public class Searcher {
+  private final SolrClient client;
 
-  public static void main(String[] args) {
+  public Searcher(){
+    String solrUrl = "http://localhost:8983/solr/library";
+    client =
+        new Http2SolrClient.Builder(solrUrl).build();
+  }
+
+  public QueryResponse runQuery(SolrQuery query) {
     QueryResponse response;
-    try (SolrClient client =
-        new Http2SolrClient.Builder("http://localhost:8983/solr/test_core_1").build()) {
-
-      SolrQuery query = new SolrQuery();
-      query.setQuery("Otherland AND Williams");
-      // query.addFilterQuery("cat:electronics","store:amazon.com");
-      query.setFields("title", "author");
-      // query.setStart(0);
-      // query.set("defType", "edismax");
-
+    try {
       response = client.query(query);
-    } catch (IOException | SolrServerException e) {
+    } catch (SolrServerException | IOException e) {
       throw new RuntimeException(e);
     }
-
     SolrDocumentList results = response.getResults();
-
     if (results.size() == 0) {
       System.out.println("Sorry, no matching documents were found.");
       for (SolrDocument result : results) {
@@ -41,5 +37,6 @@ public class Searcher {
         System.out.println(result);
       }
     }
+    return response;
   }
 }
