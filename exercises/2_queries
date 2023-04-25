@@ -1,0 +1,24 @@
+1. Alle Dokumente
+
+2. Dokumente, bei denen der Preis zwischen 10 und 15 liegt
+
+3.1. Dokumente, bei denen der Author Tad und Williams enthält
+
+3.2. Dokumente, bei denen der Author Williams aber nicht Tad enthält
+
+3.2 wie 3.1, aber als Rückgabefelder nur title, subtitle und author
+
+5. Dokumente, deren Jahr vor 2000 liegt
+
+6.1 Alle Dokumente sortiert aufsteigend nach Jahr
+
+6.2. wie 6.1, aber nur die ersten 3 Treffer
+
+7. Suche nach William soll auch Treffer mit Williams finden
+
+8. Tery Pratchet soll die gleichen Treffer ergeben wie Terry Pratchett
+
+9.1. Facette nach Author bilden
+
+9.2. Facette nach allen Authoren, die mit 'T' beginnen, es sollen nur Facetten mit mindestens 2 Treffern angezeigt werden.
+

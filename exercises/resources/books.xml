@@ -1,0 +1,104 @@
+<add>
+  <doc>
+    <field name="id">1</field>
+    <field name="isbn">978-3608949612</field>
+    <field name="title">Otherland</field>
+    <field name="subtitle">Stadt der goldenen Schatten</field>
+    <field name="description">Otherland – ein virtueller Raum, der von den reichsten und
+      skrupellosesten Männern der Erde regiert wird: Der Gralsbruderschaft. Otherland, das ist ein
+      Ort der kühnsten Phantasien und der schlimmsten Albträume.
+    </field>
+    <field name="author">Tad Williams</field>
+    <field name="year">2016</field>
+    <field name="country">USA</field>
+    <field name="price">10</field>
+  </doc>
+  <doc>
+    <field name="id">2</field>
+    <field name="isbn">978-3442484676</field>
+    <field name="title">Scheibenwelt</field>
+    <field name="subtitle">Einfach göttlich</field>
+    <field name="description">Der große Gott Om hat ein Problem: ihm sind die Gläubigen
+      abhandengekommen. Und da unter Göttern weniger Gläubige auch weniger Macht bedeuten, findet
+      sich der einst in Stiergestalt auftretende Gott plötzlich als leicht lädierte Schildkröte
+      wieder. Zum Glück führt ihn das Schicksal zum Tempelgärtner Brutha, der zwar nicht der
+      Hellste, dafür aber Oms letzter wahrer Anhänger ist. Gemeinsam machen sich die beiden auf, Om
+      wieder zu alter Größe zu verhelfen. Ein wahres Abenteuer, bei dem sie nicht nur gegen den
+      mächtigen Exquisitor Vorbis bestehen müssen, sondern auch gegen die Epheber und deren
+      unsinnigen Irrglauben an eine scheibenförmige Welt ...
+    </field>
+    <field name="author">Terry Pratchett</field>
+    <field name="year">2016</field>
+    <field name="country">GB</field>
+    <field name="price">11</field>
+  </doc>
+  <doc>
+    <field name="id">3</field>
+    <field name="isbn">978-3608949629</field>
+    <field name="title">Otherland</field>
+    <field name="subtitle">Fluß aus blauem Feuer</field>
+    <field name="description">In »Otherland«, Stadt der goldenen Schatten, öffnet der »Master of
+      Fantasy« Tad Williams, eine faszinierende und gefährliche Welt der Phantasie, in der jedes
+      Abenteuer, jeder Nachtmahr und jeder Wunsch Realität werden kann.
+    </field>
+    <field name="author">Tad Williams</field>
+    <field name="year">2017</field>
+    <field name="country">USA</field>
+    <field name="price">13</field>
+  </doc>
+  <doc>
+    <field name="id">4</field>
+    <field name="isbn">978-3442484348</field>
+    <field name="title">Scheibenwelt</field>
+    <field name="subtitle">Total verhext</field>
+    <field name="description">Aller guter Hexen sind drei. Das denken sich zumindest Esmeralda „Oma“
+      Wetterwachs, Nanny Ogg und Magrat Knoblauch. Zusammen machen sie sich auf ins geheimnisvolle
+      Märchenland Gennua, um dort die Pläne der bösen Hexe Lily zu vereiteln. Diese will das
+      Stubenmädchen Ella mit dem Herzog verheiraten – und dann durch Ella an die Macht gelangen.
+      Dass sie dabei nicht nur ein paar alteingesessene Märchen wild durcheinanderwirbelt, sondern
+      auch sonst allerlei Übel anrichtet, stört Lily nicht weiter. Zum Glück hat sie die Rechnung
+      ohne das furiose Hexentrio aus Lancre gemacht.
+    </field>
+    <field name="author">Terry Pratchett</field>
+    <field name="year">2016</field>
+    <field name="country">GB</field>
+    <field name="price">20</field>
+  </doc>
+  <doc>
+    <field name="id">5</field>
+    <field name="title">Der große Gatsby</field>
+    <field name="author">F. Scott Fitzgerald</field>
+    <field name="year">1953</field>
+    <field name="country">USA</field>
+    <field name="price">5</field>
+  </doc>
+  <doc>
+    <field name="id">6</field>
+    <field name="isbn">9783864974861</field>
+    <field name="title">Der große Gatsby</field>
+    <field name="description">Ein Meisterwerk der amerikanischen Literatur in neuer Übersetzung. Der
+      große Gatsby ist ein gesellschaftskritischer Roman, der im New York der 1920er Jahre spielt.
+      Im Mittelpunkt steht die Verkörperung des amerikanischen Traums, das Streben nach Geld, Macht
+      und Liebe, und schließlich dessen Scheitern.
+    </field>
+    <field name="author">F. Scott Fitzgerald</field>
+    <field name="year">2019</field>
+    <field name="country">USA</field>
+    <field name="price">10</field>
+  </doc>
+  <doc>
+    <field name="id">7</field>
+    <field name="isbn">978-1408114391</field>
+    <field name="title">Cat on a Hot Tin Roof</field>
+    <field name="description">In Cat on a Hot Tin Roof a Southern family meet to celebrate 'Big
+      Daddy' Pollit's birthday: Gooper with his wife and children, his brother Brick - an ageing,
+      broken football star - and his wife Maggie. But as the party unfolds the facade of a happy
+      family gathering is fractured by sexual frustration, repressed love, and greed in the light of
+      their father's impending death.
+    </field>
+    <field name="author">Tennessee Williams</field>
+    <field name="year">2010</field>
+    <field name="country">USA</field>
+    <field name="price">10</field>
+  </doc>
+</add>

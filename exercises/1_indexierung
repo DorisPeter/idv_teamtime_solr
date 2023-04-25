@@ -1,0 +1,8 @@
+Indexieren eines Dokuments
+
+Url: http://localhost:8983/solr/#/<core-name>/documents
+
+- Ein Dokument indexieren, das eine Id enthält
+- Dieses Dokument wieder löschen
+
+- Dokumente aus ./resources Ordner indexieren

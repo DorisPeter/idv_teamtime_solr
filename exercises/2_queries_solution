@@ -1,0 +1,37 @@
+1. Alle Dokumente
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&useParams=
+
+2. Dokumente, bei denen der Preis zwischen 10 und 15 liegt
+http://localhost:8983/solr/#/library/query?q=price:%5B10%20TO%2015%5D&q.op=OR&indent=true&useParams=
+
+3.1. Dokumente, bei denen der Author Tad und Williams enthält
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=AND&indent=true&fq=author:Williams&fq=author:Tad&useParams=
+
+3.2. Dokumente, bei denen der Author Williams aber nicht Tad enthält
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=AND&indent=true&fq=author:Williams&fq=-author:Tad&useParams=
+
+3.2 wie 3.1, aber als Rückgabefelder nur title, subtitle und author
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=AND&indent=true&fl=title%20subtitle%20author&fq=author:Williams&fq=author:Tad&useParams=
+
+5. Dokumente, deren Jahr vor 2000 liegt
+http://localhost:8983/solr/#/library/query?q=year:%5B*%20TO%202000%5D&q.op=OR&indent=true&useParams=
+
+6.1 Alle Dokumente sortiert aufsteigend nach Jahr
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&sort=year%20asc&useParams=
+
+6.2. wie 6.1, aber nur die ersten 3 Treffer
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&sort=year%20asc&rows=3&useParams=
+
+7. Suche nach William soll auch Treffer mit Williams finden
+http://localhost:8983/solr/#/library/query?q=author:William*&q.op=OR&indent=true&sort=year%20asc&rows=5&useParams=
+http://localhost:8983/solr/#/library/query?q=author:William%3F&q.op=OR&indent=true&sort=year%20asc&rows=5&useParams=
+http://localhost:8983/solr/#/library/query?q=author:William~1&q.op=OR&indent=true&sort=year%20asc&rows=5&useParams=
+
+8. Tery Pratchet soll die gleichen Treffer ergeben wie Terry Pratchett
+http://localhost:8983/solr/#/library/query?q=author:Tery~%20AND%20author:pratchet~1&q.op=OR&indent=true&rows=10&useParams=
+
+9.1. Facette nach Author bilden
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&facet=true&facet.field=author_facet&rows=0&useParams=
+
+9.2. Facette nach allen Authoren, die mit 'T' beginnen, es sollen nur Facetten mit mindestens 2 Treffern angezeigt werden.
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&facet=true&facet.field=author_facet&rows=0&facet.prefix=T&facet.mincount=2&useParams=

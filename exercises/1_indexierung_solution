@@ -1,0 +1,30 @@
+Indexieren eines Dokuments
+
+- Ein Dokument indexieren, das eine Id enthält
+http://localhost:8983/solr/#/<core-name>/documents
+
+<doc>
+    <field name="id">1</field>
+</doc>
+
+Überprüfen, ob das Dokument angekommen ist:
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&useParams=
+
+- Dieses Dokument wieder löschen
+
+<delete>
+    <id>1</id>
+</delete>
+
+Oder
+
+<delete>*:*</delete>
+
+Oder über curl (Hat bei mir nicht funktioniert):
+
+curl -X POST -H 'Content-Type: application/xml' 'http://localhost:8983/solr/library/update?commit=true' --data-binary '<delete><id>1</id></delete>'
+
+- Dokumente aus ./resources Ordner indexieren
+
+
+
