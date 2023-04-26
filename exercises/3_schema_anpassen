@@ -1,0 +1,28 @@
+1. Title in ein Copy Field kopieren, dafür einen neuen FieldType anlegen, mit KeywordTokenizer und lowercase.
+  Ziel: Titel kann über dieses Feld nur im Ganzen gefunden werden.
+
+  Test-Query:
+  http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&facet=true&facet.field=title_untokenized&rows=0&useParams=
+
+2. In text_general:
+  - Stopwortliste einbauen
+
+  - Synonyme einbauen
+    Erde => Welt
+    Zauberer => Hexen
+
+    Test-String:
+    http://localhost:8983/solr/#/library/query?q=description:Welt&q.op=OR&indent=true&rows=10&useParams=
+    http://localhost:8983/solr/#/library/query?q=description:Erde&q.op=OR&indent=true&rows=10&useParams=
+
+   - Umlautmapping (ASCII Folding) einbauen
+   Test-Url:
+   http://localhost:8983/solr/#/library/analysis?analysis.fieldvalue=Hall%C3%B6chen&analysis.query=Hall%C3%B6chen&analysis.fieldtype=text_general&verbose_output=1
+
+
+3. Feld für die Volltextsuche, alle (sinnvollen) Felder in ein Copy-Field kopieren
+
+Test-Url:
+http://localhost:8983/solr/#/library/query?q=*:*&q.op=OR&indent=true&fq=full_text_search:Schatten&fq=full_text_search:Williams&useParams=
+
+Achtung, wenn das Schema geändert wird, muss man den Core reloaden, evtl sogar die Daten löschen und neu indexieren!
