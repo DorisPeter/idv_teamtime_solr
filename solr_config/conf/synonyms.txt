@@ -1,3 +1,0 @@
-Zauberer => Hexen
-Hexe => Hexen
-Erde => Welt
